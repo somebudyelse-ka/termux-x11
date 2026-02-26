@@ -6,7 +6,7 @@ if (gradle.startParameter.taskNames.isEmpty())
 else
     apply plugin: 'com.android.application'
 
-android.namespace 'com.atharok.btremote.gplay.shell_loader'
+android.namespace 'com.termux.x11.shell_loader'
 android.defaultConfig.minSdkVersion 26
 android.compileSdkVersion 34
 android.buildTypes.debug.signingConfig null
