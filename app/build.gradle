@@ -17,7 +17,7 @@ android {
 
     signingConfigs.debug {
         storeFile file('testkey_untrusted.jks')
-        keyAlias 'alias'
+        keyAlias 'platform'
         storePassword 'testkey'
         keyPassword 'testkey'
     }
