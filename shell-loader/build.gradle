@@ -6,7 +6,7 @@ if (gradle.startParameter.taskNames.isEmpty())
 else
     apply plugin: 'com.android.application'
 
-android.namespace 'com.termux.x11.shell_loader'
+android.namespace 'com.atharok.btremote.gplay.shell_loader'
 android.defaultConfig.minSdkVersion 26
 android.compileSdkVersion 34
 android.buildTypes.debug.signingConfig null
@@ -27,10 +27,10 @@ def signingConfig = project(':app').android.signingConfigs.debug
 def keyStore = java.security.KeyStore.getInstance(java.security.KeyStore.getDefaultType())
 keyStore.load(new FileInputStream(signingConfig.storeFile), signingConfig.keyPassword.toCharArray())
 
-android.defaultConfig.buildConfigField "String", "APPLICATION_ID", "\"com.termux.x11\""
+android.defaultConfig.buildConfigField "String", "APPLICATION_ID", "\"com.atharok.btremote.gplay\""
 android.defaultConfig.buildConfigField "String", "logTag", "\"Termux:X11 loader\""
-android.defaultConfig.buildConfigField "int", "SIGNATURE", String.valueOf(Arrays.hashCode(keyStore.getCertificate(signingConfig.keyAlias).getEncoded()))
-android.defaultConfig.buildConfigField "String", "CLASS_ID", "\"com.termux.x11.CmdEntryPoint\""
+android.defaultConfig.buildConfigField "int", "SIGNATURE", "1066636623751149020"
+android.defaultConfig.buildConfigField "String", "CLASS_ID", "\"com.atharok.btremote.gplay.CmdEntryPoint\""
 android.defaultConfig.buildConfigField "String", "packageNotInstalledErrorText",
         """\"Termux:X11 application is not found.\\n\" +
         \"You should choose latest release here: \\n https://github.com/termux/termux-x11/releases/tag/nightly\\n\" +
