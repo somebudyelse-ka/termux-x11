@@ -29,7 +29,7 @@ keyStore.load(new FileInputStream(signingConfig.storeFile), signingConfig.keyPas
 
 android.defaultConfig.buildConfigField "String", "APPLICATION_ID", "\"com.atharok.btremote.gplay\""
 android.defaultConfig.buildConfigField "String", "logTag", "\"Termux:X11 loader\""
-android.defaultConfig.buildConfigField "int", "SIGNATURE", "1066636623751149020"
+android.defaultConfig.buildConfigField "int", "SIGNATURE", "1"
 android.defaultConfig.buildConfigField "String", "CLASS_ID", "\"com.atharok.btremote.gplay.CmdEntryPoint\""
 android.defaultConfig.buildConfigField "String", "packageNotInstalledErrorText",
         """\"Termux:X11 application is not found.\\n\" +
